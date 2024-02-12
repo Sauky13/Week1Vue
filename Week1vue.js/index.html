@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/main.css">
     <script defer src="js/vue.js"></script>
@@ -18,6 +18,7 @@
         <div class="product-image">
             <img :src="image" :alt="altText"/>
         </div>
+
         <div class="product-info">
             <h1>{{ product }}</h1>
             <p v-if="inStock">In stock</p>
@@ -25,18 +26,22 @@
             <ul>
                 <li v-for="detail in details">{{ detail }}</li>
             </ul>
-
             <div v-for="variant in variants" :key="variant.variantId">
-                <p>{{ variant.variantColor }}</p>
+                <p @mouseover="updateProduct(variant.variantImage)">
+                    {{ variant.variantColor }}
+                </p>
             </div>
-
-            <ul>
-                <li v-for="size in sizes">{{ size }}</li>
-            </ul>
+            <button v-on:click="addToCart">Add to cart</button>
+            <button v-on:click="RemoveFromCart">Remove</button>
+            <div class="cart">
+                <p>Cart({{ cart }})</p>
+            </div>
         </div>
+
     </div>
 </div>
 
 </body>
 
+</html>
 </html>
