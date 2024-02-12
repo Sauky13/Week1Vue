@@ -2,9 +2,11 @@ let app = new Vue({
     el: '#app',
     data: {
         product: "Socks",
-        image: "./assets/vmSocks-blue-onWhite.jpg",
+        image: "./assets/vmSocks-green-onWhite.jpg",
         altText: "A pair of socks",
-        description: "A pair of warm, fuzzy socks.",
-        link: "https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=socks"
+        inStock: true,
+        inventory: 10,
+        OnSale: true
     }
 })
+
