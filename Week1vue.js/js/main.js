@@ -4,9 +4,8 @@ let app = new Vue({
         product: "Socks",
         image: "./assets/vmSocks-green-onWhite.jpg",
         altText: "A pair of socks",
-        inStock: true,
+        inStock: false,
         details: ['80% cotton', '20% polyester', 'Gender-neutral'],
-        cart: 0,
         variants: [
             {
                 variantId: 2234,
@@ -19,24 +18,16 @@ let app = new Vue({
                 variantImage: "./assets/vmSocks-blue-onWhite.jpg",
             }
         ],
-        updateProduct(variantImage) {
-            this.image = variantImage
-        }
-
+        cart: 0
     },
     methods: {
         addToCart() {
             this.cart += 1
         },
-        RemoveFromCart() {
-            if (this.cart > 0) {
-                this.cart -= 1
-            } else {
-                alert('В корзине ничего нет ')
-            }
+        updateProduct(variantImage) {
+            this.image = variantImage
         }
-    },
-
-
+    }
 })
+
 
