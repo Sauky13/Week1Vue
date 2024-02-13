@@ -87,6 +87,6 @@ textarea {
     text-decoration: underline;
 }
 
-.lineThrough {
+lineThrough {
     text-decoration: line-through;
 }
