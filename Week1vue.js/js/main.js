@@ -187,7 +187,9 @@ Vue.component('product', {
         <div class="product-info">
           <h1>{{ title }}</h1>
           <p>{{ description }}</p>
-          <p>{{ sale }}</p>
+          <span v-show="onSale">
+          <p>SALE!</p>
+          </span>
           <a v-bind:href="link">More products like this</a>
           <p v-if="inStock">In Stock</p>
           <p v-else style="text-decoration: line-through">Out of Stock</p>
@@ -216,6 +218,7 @@ Vue.component('product', {
             product: "Socks",
             brand: 'Vue Mastery',
             selectedVariant: 0,
+            onSale: true,
             image: "./assets/vmSocks-green-onWhite.jpg",
             altText: "A pair of socks",
             link: "https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=socks",
