@@ -47,7 +47,6 @@ img {
 }
 
 button {
-    margin-top: 30px;
     border: none;
     background-color: #1E95EA;
     color: white;
@@ -89,4 +88,15 @@ textarea {
 
 lineThrough {
     text-decoration: line-through;
+}
+.search{
+    display: flex;
+    gap: 10px;
+}
+#search-btn{
+    width: 100px;
+    height: 30px;
+}
+#search-input{
+    width: 150px;
 }
